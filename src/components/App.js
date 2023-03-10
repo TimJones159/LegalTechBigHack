@@ -60,7 +60,7 @@ const sidebar = {
 
 const theme = createTheme();
 
-export default function Blog() {
+export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -69,17 +69,9 @@ export default function Blog() {
         <main>
           <MainFeaturedPost post={mainFeaturedPost} />
           <Grid container spacing={4}>
-            <Paper>
+            <Grid item xs={8}>
               <p>test</p>
-            </Paper>
-          </Grid>
-          <Grid container spacing={5} sx={{ mt: 3 }}>
-            <Sidebar
-              title={sidebar.title}
-              description={sidebar.description}
-              archives={sidebar.archives}
-              social={sidebar.social}
-            />
+            </Grid>
           </Grid>
         </main>
       </Container>
