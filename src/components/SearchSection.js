@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import Button from "@mui/material/Button";
 import SearchIcon from "@mui/icons-material/Search";
 import TextField from "@mui/material/TextField";
 
 export const SearchSection = () => {
-  let history = useHistory();
+  let history = useNavigate();
 
   const [search, setSearch] = useState("");
 
