@@ -1,13 +1,15 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 
 export const SearchSection = ({ small = false, full = false }) => {
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
 
-  const [search, setSearch] = useState("");
+  const defaultSearchTerm = searchParams.get("term") || "";
+  const [search, setSearch] = useState(defaultSearchTerm);
 
   const setSearchQuery = ({ target: { value } }) => {
     setSearch(value);
