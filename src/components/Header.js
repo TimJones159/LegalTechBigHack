@@ -14,11 +14,13 @@ function Header(props) {
     <React.Fragment>
       <Toolbar sx={{ borderBottom: 1, borderColor: 'divider', boxShadow: '0 2px 8px 0 rgba(0,0,0,0.2)' }}>
         <div style={{ display: 'flex', alignItems: 'center', flex: 1 }}>
-          <img
-            src="/logo.png"
-            alt="Logo"
-            style={{ maxHeight: '35px', marginRight: '8px' }}
-          />
+          <div className="header__logo">
+            <img
+              src="/logo.png"
+              alt="Logo"
+              style={{ maxHeight: '50px', marginRight: '8px' }}
+            />
+          </div>
           <Typography
             component="h2"
             variant="h6"
@@ -35,7 +37,8 @@ function Header(props) {
           color="inherit"
           align="center"
           noWrap
-          sx={{ flex: 1 }}
+          sx={{ marginRight: '35px' }}
+
         >
         </Typography>
         <Button size="small">

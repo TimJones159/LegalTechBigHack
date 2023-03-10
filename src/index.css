@@ -23,3 +23,8 @@ body {
 .searchSection__searchBar {
   width: 50%;
 }
+
+.header__logo {
+  min-width: 100px;
+  text-align: center;
+}
