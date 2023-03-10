@@ -9,11 +9,26 @@ import Link from '@mui/material/Link';
 
 function Header(props) {
   const { title } = props;
-
+  const intro = "Hello, LawyerName!";
   return (
     <React.Fragment>
-      <Toolbar sx={{ borderBottom: 1, borderColor: 'divider', boxShadow: '0 2px 8px 0 rgba(0,0,0,0.2)', width: '100%' }}>
-        {title}
+      <Toolbar sx={{ borderBottom: 1, borderColor: 'divider', boxShadow: '0 2px 8px 0 rgba(0,0,0,0.2)' }}>
+        <div style={{ display: 'flex', alignItems: 'center', flex: 1 }}>
+          <img
+            src="/logo.png"
+            alt="Logo"
+            style={{ maxHeight: '35px', marginRight: '8px' }}
+          />
+          <Typography
+            component="h2"
+            variant="h6"
+            color="inherit"
+            noWrap
+            sx={{ flex: 1 }}
+          >
+            {intro}
+          </Typography>
+        </div>
         <Typography
           component="h2"
           variant="h5"
@@ -22,7 +37,6 @@ function Header(props) {
           noWrap
           sx={{ flex: 1 }}
         >
-
         </Typography>
         <Button size="small">
           My library
