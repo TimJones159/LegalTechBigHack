@@ -7,17 +7,21 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.searchSection {
+.searchPage {
   text-align: center;
 }
 
-.searchSection h1 {
+.searchPage h1 {
   font-weight: normal;
 }
 
 .searchSection__search {
   display: flex;
   justify-content: center;
+}
+
+.searchSection__search .full > div {
+  width: 100%;
 }
 
 .searchSection__searchBar {
@@ -27,4 +31,69 @@ body {
 .header__logo {
   min-width: 100px;
   text-align: center;
+}
+
+.resultsSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.resultsSection > span > a {
+  text-decoration: none;
+}
+
+.resultsSection .searchSection__search > div {
+  min-width: 380px;
+}
+
+.knowledge {
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.result {
+  margin-top: 30px;
+}
+
+.result a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.result h2 {
+  margin: 0;
+}
+
+.result p {
+  font-size: 15px;
+  margin: 0;
+}
+
+.result span {
+  font-size: 13px;
+}
+
+.resultsSort {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0px;
+}
+
+.resultsSort .heading {
+  margin-right: 10px;
+}
+
+.resultsSort span:not(.heading) {
+  color: #18a0fb;
+  cursor: pointer;
+}
+
+.resultsSort span.totalResults {
+  color: initial;
+}
+
+.resultsSort .active {
+  font-weight: bold;
+  margin-right: 10px;
 }

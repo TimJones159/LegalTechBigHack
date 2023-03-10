@@ -2,10 +2,9 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import Button from "@mui/material/Button";
-import SearchIcon from "@mui/icons-material/Search";
 import TextField from "@mui/material/TextField";
 
-export const SearchSection = () => {
+export const SearchSection = ({ small = false, full = false }) => {
   const navigate = useNavigate();
 
   const [search, setSearch] = useState("");
@@ -16,14 +15,12 @@ export const SearchSection = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    navigate(`/search?term=${search}`);
+    navigate(`/results?term=${search}`);
   };
 
   return (
     <form className="searchSection" onSubmit={handleSubmit}>
-      <h1>Search for a case</h1>
-
-      <div className="searchSection__search">
+      <div className={`searchSection__search ${full ? "full" : ""}`}>
         <TextField
           id="search-bar"
           className="searchSection__searchBar"
@@ -31,7 +28,7 @@ export const SearchSection = () => {
           label="Search by case name, case type or case number"
           variant="outlined"
           placeholder="Search by case name, case type or case number"
-          size="medium"
+          size={`${small ? "small" : "medium"}`}
           value={search}
         />
         <Button type="submit" variant="contained" aria-label="search">

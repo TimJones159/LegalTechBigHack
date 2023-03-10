@@ -14,6 +14,11 @@ const theme = createTheme({
   typography: {
     fontFamily: "Montserrat, sans-serif",
   },
+  palette: {
+    primary: {
+      main: "#18a0fb",
+    },
+  },
 });
 
 export default function App() {
