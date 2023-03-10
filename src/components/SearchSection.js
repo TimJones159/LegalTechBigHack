@@ -6,7 +6,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import TextField from "@mui/material/TextField";
 
 export const SearchSection = () => {
-  let history = useNavigate();
+  const navigate = useNavigate();
 
   const [search, setSearch] = useState("");
 
@@ -14,9 +14,11 @@ export const SearchSection = () => {
     setSearch(value);
   };
 
-  const handleSubmit = () => {
-    history.push();
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    navigate(`/search?term=${search}`);
   };
+
   return (
     <form className="searchSection" onSubmit={handleSubmit}>
       <h1>Search for a case</h1>
