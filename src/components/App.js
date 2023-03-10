@@ -6,7 +6,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import SearchSection from "./SearchSection";
+import Routing from "./Routing";
 import Header from "./Header";
 import Footer from "./Footer";
 
@@ -22,9 +22,7 @@ export default function App() {
       <CssBaseline />
       <Header title="Logo" />
       <Container maxWidth="lg">
-        <main>
-          <SearchSection />
-        </main>
+        <Routing />
       </Container>
       <Footer
         title="Footer"
