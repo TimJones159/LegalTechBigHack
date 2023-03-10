@@ -58,7 +58,11 @@ const sidebar = {
   ],
 };
 
-const theme = createTheme();
+const theme = createTheme({
+  typography: {
+    fontFamily: 'Montserrat, sans-serif',
+  },
+});
 
 export default function App() {
   return (
