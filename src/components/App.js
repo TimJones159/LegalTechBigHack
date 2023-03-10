@@ -27,7 +27,7 @@ export default function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Header title="Logo" />
-      <Container maxWidth="lg">
+      <Container maxWidth="lg" className="main">
         <Routing />
       </Container>
       <Footer

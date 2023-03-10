@@ -7,6 +7,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.main {
+  margin-top: 40px;
+}
+
 .searchPage {
   text-align: center;
 }
@@ -104,6 +108,7 @@ body {
   padding-left: 24px;
   padding-right: 24px;
   margin-top: 100px;
+  margin-bottom: 10px;
 }
 
 .footer__links a {
