@@ -10,19 +10,6 @@ import SearchSection from "./SearchSection";
 import Header from "./Header";
 import Footer from "./Footer";
 
-const sections = [
-  { title: "Technology", url: "#" },
-  { title: "Design", url: "#" },
-  { title: "Culture", url: "#" },
-  { title: "Business", url: "#" },
-  { title: "Politics", url: "#" },
-  { title: "Opinion", url: "#" },
-  { title: "Science", url: "#" },
-  { title: "Health", url: "#" },
-  { title: "Style", url: "#" },
-  { title: "Travel", url: "#" },
-];
-
 const theme = createTheme({
   typography: {
     fontFamily: "Montserrat, sans-serif",
@@ -33,8 +20,8 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
+      <Header title="Logo" />
       <Container maxWidth="lg">
-        <Header title="Logo" sections={sections} />
         <main>
           <SearchSection />
           <Grid container spacing={4}>
