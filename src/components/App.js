@@ -24,11 +24,6 @@ export default function App() {
       <Container maxWidth="lg">
         <main>
           <SearchSection />
-          <Grid container spacing={4}>
-            <Grid item xs={8}>
-              <p>test</p>
-            </Grid>
-          </Grid>
         </main>
       </Container>
       <Footer
